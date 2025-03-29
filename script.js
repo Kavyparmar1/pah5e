@@ -1,4 +1,4 @@
-// 1️⃣ Initialize Lenis for smooth scrolling
+
 const lenis = new Lenis({
   duration: 1.2,
   easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), 
@@ -22,7 +22,7 @@ gsap.ticker.add((time) => {
   lenis.raf(time * 1000);
 });
 
-// 2️⃣ Initialize Shery Mouse Follower
+
 if (!/Mobi|Android/i.test(navigator.userAgent)) {
   Shery.mouseFollower({
     skew: true,
@@ -35,7 +35,7 @@ lenis.start();
 document.body.style.overflow = "auto"; // Enable scrolling
 
 
-// 3️⃣ Image Hover Effect (Shery.js)
+
 Shery.hoverWithMediaCircle("#elem1", {
   images: ["./kp.1.png", "./kp.2.png", "./kp.3.jpg","./kp.4.png"],
 });
@@ -101,66 +101,6 @@ gsap.to("#try-1", {
   });
   
 
-// function loadingAnimation() {
-//   var tl = gsap.timeline();
-
-//   // Text animation
-//   tl.from(".line h1", {
-//       y: 150,
-//       stagger: 0.25,
-//       duration: 0.6,
-//       delay: 0.5,
-//   });
-
-//   // Number counter animation
-//   tl.from("#line1-part1", {
-//       opacity: 0,
-//       onStart: function () {
-//           var h5timer = document.querySelector("#line1-part1 h5");
-//           var grow = 0;
-//           var interval = setInterval(function () {
-//               if (grow < 100) {
-//                   h5timer.innerHTML = grow++;
-//               } else {
-//                   h5timer.innerHTML = "100"; // Ensure it stops at 100
-//                   clearInterval(interval); // Stop the counter
-//               }
-//           }, 27);
-//       },
-//   });
-
-//   // Smooth appearance of 'Now'
-//   tl.to(".line h2", {
-//       animationName: "loaderAnime",
-//       opacity: 1,
-//   });
-
-//   // Fading out loader
-//   tl.to("#loader", {
-//       opacity: 0,
-//       duration: 0.5,
-//       delay: 1.6, // Adjusted delay
-//       onComplete: function () {
-//           document.querySelector("#loader").style.display = "none"; // Hide loader properly
-//       },
-//   });
-
-//   // Bringing page1 into view
-//   tl.from("#page1", {
-//       opacity:0,
-//       y: 1600,
-//       duration: 0.5,
-   
-//   });
-
-//   // Navbar fade-in
-//   tl.from("#nav", {
-//       opacity: 0,
-//   });
-// }
-
-// // Call the function after DOM loads
-// document.addEventListener("DOMContentLoaded", loadingAnimation);
 
 var videoContainer = document.querySelector("#video-container");
 var video = document.querySelector("#video-container video")
